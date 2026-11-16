@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Таиланд: пляжный отдых, храмы, острова, дайвинг и полезная информация для путешественников.">
+    <title>Таиланд — многостраничный сайт</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f8fb;
+            color: #22303c;
+            line-height: 1.6;
+        }
+
+        .site-header {
+            background: linear-gradient(135deg, #006994, #00a6a6);
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .site-header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .site-header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .main-nav {
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .main-nav button {
+            color: #006994;
+            background: transparent;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .main-nav button:hover {
+            background: #e6f4f7;
+        }
+
+        .main-nav button.active {
+            background: #006994;
+            color: #fff;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        .hero,
+        .content {
+            background: #fff;
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+        }
+
+        h2,
+        h3,
+        h4 {
+            color: #006994;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 12px;
+        }
+
+        ul,
+        ol {
+            margin: 0 0 15px 25px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        a {
+            color: #0077b6;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: #f7fbfc;
+            border: 1px solid #dceaf0;
+            border-radius: 12px;
+            padding: 18px;
+        }
+
+        .card h4 {
+            margin-top: 0;
+        }
+
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        figcaption {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #5c6b76;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+        }
+
+        th,
+        td {
+            border: 1px solid #dceaf0;
+            padding: 10px 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #e6f4f7;
+            color: #00506e;
+        }
+
+        .site-footer {
+            background: #00485e;
+            color: #fff;
+            text-align: center;
+            padding: 25px 20px;
+        }
+
+        .site-footer button {
+            background: transparent;
+            color: #bfe9f5;
+            border: none;
+            font-size: 15px;
+            cursor: pointer;
+            padding: 4px 8px;
+        }
+
+        .site-footer button:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .site-header h1 {
+                font-size: 30px;
+            }
+
+            .main-nav {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <h1>Таиланд</h1>
+    <p>Страна улыбок, островов, храмов и тропических пляжей</p>
+</header>
+
+<nav class="main-nav">
+    <button class="active" onclick="showPage('home', this)">Главная</button>
+    <button onclick="showPage('destinations', this)">Курорты и достопримечательности</button>
+    <button onclick="showPage('info', this)">Полезная информация</button>
+</nav>
+
+<main>
+
+    <!-- ГЛАВНАЯ СТРАНИЦА -->
+    <section id="home" class="page active">
+        <div class="hero">
+            <h2>Зачем ехать в Таиланд?</h2>
+            <p>
+                Таиланд привлекает туристов белоснежными пляжами, бирюзовым морем, буддийскими храмами,
+                королевскими дворцами, ночными рынками, тайской кухней, SPA и дайвингом.
+            </p>
+            <p>
+                На юге страны находятся популярные острова и пляжи: Пхукет, Самуи, Пхи-Пхи,
+                Ко Ланта, Ко Тао и Ко Липе.
+            </p>
+        </div>
+
+        <div class="content">
+            <h3>Чем заняться</h3>
+            <ul>
+                <li>Отдыхать на пляжах Пхукета, Краби, Самуи и Пхи-Пхи.</li>
+                <li>Посетить храмы и дворцы Бангкока.</li>
+                <li>Заниматься дайвингом и снорклингом.</li>
+                <li>Попробовать пад-тай, том-ям и манго со сладким рисом.</li>
+                <li>Сходить на тайский массаж или в SPA.</li>
+                <li>Погулять по ночным рынкам.</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h3>Популярные направления</h3>
+            <div class="cards">
+                <article class="card">
+                    <h4>Бангкок</h4>
+                    <p>Столица Таиланда с храмами, дворцами, музеями, рынками и современной городской жизнью.</p>
+                    <button onclick="showPage('destinations', document.querySelectorAll('.main-nav button')[1])">Подробнее</button>
+                </article>
+
+                <article class="card">
+                    <h4>Пхукет</h4>
+                    <p>Крупнейший остров Таиланда на Андаманском море, известный пляжами и морскими прогулками.</p>
+                    <button onclick="showPage('destinations', document.querySelectorAll('.main-nav button')[1])">Подробнее</button>
+                </article>
+
+                <article class="card">
+                    <h4>Чиангмай</h4>
+                    <p>Северный город с храмами, горами, природой и культурой Ланна.</p>
+                    <button onclick="showPage('destinations', document.querySelectorAll('.main-nav button')[1])">Подробнее</button>
+                </article>
+            </div>
+        </div>
+
+        <div class="content">
+            <h3>Фотография Таиланда</h3>
+            <figure>
+                <img
+                    src="https://horosho-tam.ru/thumb/top/pics/f0/e7/63f911fd00ce245ceb5be7f0/tailand.jpg"
+                    alt="Тропический пейзаж Таиланда: море, пальмы и острова"
+                    width="800"
+                >
+                <figcaption>Таиланд известен пляжами Андаманского моря и Сиамского залива.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- СТРАНИЦА КУРОРТОВ -->
+    <section id="destinations" class="page">
+        <div class="content">
+            <h2>Бангкок</h2>
+            <p>
+                Бангкок — столица Таиланда и один из главных туристических городов страны.
+                Здесь можно увидеть храмы, дворцы, музеи, парки, торговые центры и ночные рынки.
+            </p>
+            <ul>
+                <li>Храм Изумрудного Будды — Ват Пхракэу.</li>
+                <li>Храм Лежащего Будды — Ват По.</li>
+                <li>Храм Утренней Зари — Ват Арун.</li>
+                <li>Королевский дворец.</li>
+                <li>Выходной рынок Чатучак.</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h2>Пхукет</h2>
+            <p>
+                Пхукет — крупнейший остров Таиланда, расположенный в Андаманском море.
+                Остров известен пляжами Патонг, Карон, Ката, Камала, Най-Харн и Май-Кхао.
+            </p>
+            <ul>
+                <li>Пляж Патонг — центр ночной жизни и развлечений.</li>
+                <li>Карон Бич — широкий пляж с мелким песком.</li>
+                <li>Май Кхао — более спокойный пляж на севере острова.</li>
+                <li>Смотровая площадка Лаем Промтхеп — известное место для встречи заката.</li>
+                <li>Морские прогулки к островам Пхи-Пхи и заливу Пхангнга.</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h2>Чиангмай</h2>
+            <p>
+                Чиангмай находится на севере Таиланда и сочетает горную природу, исторические храмы
+                и культуру Ланна. Одной из главных достопримечательностей является храм
+                Ват Пхратхат Дой Сутхеп.
+            </p>
+            <ul>
+                <li>Ват Пхратхат Дой Сутхеп.</li>
+                <li>Гора Дой Интханон — самая высокая точка Таиланда.</li>
+                <li>Пешеходная улица Тхапе.</li>
+                <li>Район Нимманхамин с кафе и ремесленными лавками.</li>
+                <li>Королевский парк Раджапруэк.</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h2>Другие популярные места</h2>
+            <div class="cards">
+                <article class="card">
+                    <h4>Краби</h4>
+                    <p>Провинция с известняковыми скалами, пляжами, островами и маршрутами для дайвинга.</p>
+                </article>
+
+                <article class="card">
+                    <h4>Пхи-Пхи</h4>
+                    <p>Острова с прозрачной водой, популярные для снорклинга, дайвинга и морских прогулок.</p>
+                </article>
+
+                <article class="card">
+                    <h4>Самуи</h4>
+                    <p>Остров в Сиамском заливе с пляжами, пальмами, SPA и морскими экскурсиями.</p>
+                </article>
+
+                <article class="card">
+                    <h4>Аюттхая</h4>
+                    <p>Древняя столица Таиланда с руинами храмов и историческими памятниками.</p>
+                </article>
+            </div>
+        </div>
+
+        <div class="content">
+            <h3>Совет путешественнику</h3>
+            <p>
+                Для поездки к островам лучше заранее проверить погоду и расписание паромов.
+                На пляжах обращайте внимание на предупреждающие флаги: красный флаг означает
+                опасность для купания.
+            </p>
+        </div>
+    </section>
+
+    <!-- СТРАНИЦА ИНФОРМАЦИИ -->
+    <section id="info" class="page">
+        <div class="content">
+            <h2>Основные сведения</h2>
+            <table>
+                <tr>
+                    <th>Параметр</th>
+                    <th>Информация</th>
+                </tr>
+                <tr>
+                    <td>Столица</td>
+                    <td>Бангкок</td>
+                </tr>
+                <tr>
+                    <td>Официальный язык</td>
+                    <td>Тайский</td>
+                </tr>
+                <tr>
+                    <td>Валюта</td>
+                    <td>Тайский бат (THB)</td>
+                </tr>
+                <tr>
+                    <td>Часовой пояс</td>
+                    <td>UTC+7</td>
+                </tr>
+                <tr>
+                    <td>Религия</td>
+                    <td>Буддизм</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="content">
+            <h2>Виза</h2>
+            <p>
+                Для граждан России действует безвизовый режим: находиться в Таиланде можно
+                до 90 дней. При необходимости срок пребывания можно продлить в иммиграционной
+                службе ещё на 30 дней за 1900 бат.
+            </p>
+            <p>
+                Перед поездкой проверяйте актуальные правила на сайте посольства или консульства,
+                так как визовые условия могут меняться.
+            </p>
+        </div>
+
+        <div class="content">
+            <h2>Деньги и покупки</h2>
+            <ul>
+                <li>Национальная валюта — тайский бат.</li>
+                <li>Обмен валюты удобнее делать в лицензированных обменных пунктах.</li>
+                <li>В крупных магазинах и отелях часто принимают банковские карты.</li>
+                <li>На рынках и в небольших кафе может понадобиться наличными.</li>
+                <li>Торг уместен на рынках, но не в магазинах с фиксированными ценами.</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h2>Транспорт</h2>
+            <ul>
+                <li>В Бангкоке популярны метро, наземное метро, автобусы и такси.</li>
+                <li>Между островами обычно передвигаются на паромах и скоростных катерах.</li>
+                <li>Для поездок по острову можно арендовать автомобиль, скутер или воспользоваться такси.</li>
+                <li>При аренде транспорта обязательно уточняйте правила страховки и наличие прав.</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h2>Советы туристу</h2>
+            <ul>
+                <li>Уважайте храмы: надевайте одежду, закрывающую плечи и колени.</li>
+                <li>Не трогайте голову местных жителей и не указывайте на людей ногами.</li>
+                <li>Пейте бутилированную воду.</li>
+                <li>Используйте солнцезащитный крем и пейте достаточно воды.</li>
+                <li>Сохраняйте контакты отеля, страховой компании и экстренных служб.</li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h2>Полезные ссылки</h2>
+            <ul>
+                <li>
+                    <a href="https://www.tutu.ru/geo/strana/thailand/" target="_blank" rel="noopener">
+                        Таиланд на Туту.ру
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.tourismthailand.org/" target="_blank" rel="noopener">
+                        Официальный сайт Tourism Authority of Thailand
+                    </a>
+                </li>
+                <li>
+                    <a href="https://tourismthailand.ru/" target="_blank" rel="noopener">
+                        Туристическое управление Таиланда на русском языке
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <p>Автор: Татьяна Кигим</p>
+    <p>
+        <button onclick="showPage('home', document.querySelectorAll('.main-nav button')[0])">Главная</button> |
+        <button onclick="showPage('destinations', document.querySelectorAll('.main-nav button')[1])">Курорты</button> |
+        <button onclick="showPage('info', document.querySelectorAll('.main-nav button')[2])">Информация</button>
+    </p>
+</footer>
+
+<script>
+    function showPage(pageId, button) {
+        const pages = document.querySelectorAll('.page');
+        const buttons = document.querySelectorAll('.main-nav button');
+
+        pages.forEach(function(page) {
+            page.classList.remove('active');
+        });
+
+        buttons.forEach(function(item) {
+            item.classList.remove('active');
+        });
+
+        document.getElementById(pageId).classList.add('active');
+
+        if (button) {
+            button.classList.add('active');
+        }
+
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+</script>
+
+</body>
+</html>
