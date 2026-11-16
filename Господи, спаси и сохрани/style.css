@@ -1,0 +1,34 @@
+/* Шрифт страницы для заголовка h1 */ 
+body {
+font-family: Arial, Helvetica, sans-serif;
+}  
+h1 {
+color: #4191e7;
+padding: 15px;
+}
+/* Цвет для заголовка h1 */
+h1 {
+color: aquamarine;
+}
+/* Размер шрифта для абзацев p */ 
+p {
+font-size: 14px;
+margin-bottom: 12px;
+}
+/* Отступы для текста ul */ 
+ul {
+margin-bottom: 15px;
+padding-left: 30px;
+}
+/* Цвет для подвала footer */
+footer {
+background-color: aqua;
+}
+/* Выравнивание для подвала footer */
+footer {
+text-align: center;
+}
+/* Жирные подзаголовки для h2, h3 */ 
+h2, h3 {
+font-weight: bold;
+}
